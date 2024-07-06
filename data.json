@@ -1,0 +1,226 @@
+{
+    "shoes": {
+        "lifestyle": {
+            "products": [
+                {
+                    "id": 101,
+                    "name": "Nike Dunk Low Retro",
+                    "price": 8295,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/51867688-277b-4615-ab39-876653f6b810/dunk-low-retro-shoe-66RGqF.png"
+                },
+                {
+                    "id": 102,
+                    "name": "Nike Air Jordan Low 1",
+                    "price": 8995,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/86991b52-33a2-4e41-aace-c05510832f84/air-jordan-1-low-shoes-6Q1tFM.png"
+                },
+                {
+                    "id": 103,
+                    "name": "Nike Air Force",
+                    "price": 7495,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/4f37fca8-6bce-43e7-ad07-f57ae3c13142/air-force-1-07-shoes-WrLlWX.png"
+                },
+                {
+                    "id": 104,
+                    "name": "Nike Court Vision Low",
+                    "price": 5695,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/eaf524f7-a9f7-4f70-a438-1b0480eb2540/court-vision-low-shoes-q0sr67.png"
+                },
+                {
+                    "id": 105,
+                    "name": "Nike Air Max",
+                    "price": 5995,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/9ddd329e-a702-4a18-b621-cd21739483e1/air-max-sc-shoes-2fm8C6.png"
+                },
+                {
+                    "id": 106,
+                    "name": "Nike Cortez",
+                    "price": 8495,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/2d9c0b7f-f5b8-44c6-a4c1-08ba9b792d90/cortez-txt-shoes-9BDLNk.png"
+                }
+            ]
+        },
+        "jordan": {
+            "products": [
+                {
+                    "id": 201,
+                    "name": "Tatum 2 Vortex",
+                    "price": 11495,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/w_960,c_limit/615835fa-d352-4dba-a8b1-5cfd7ccfce5a/image.png"
+                },
+                {
+                    "id": 202,
+                    "name": "Tatum 2 PF",
+                    "price": 10795,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/30648388-71e0-4cd0-b2b3-72e5c458ec58/tatum-2-pf-basketball-shoes-8fp79D.png"
+                },
+                {
+                    "id": 203,
+                    "name": "Tatum 2 Legacy",
+                    "price": 11495,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/3bdf52f5-1615-4bdf-9936-355332055c21/tatum-2-legacy-pf-basketball-shoes-WWbXXK.png"
+                },
+                {
+                    "id": 204,
+                    "name": "Jordan Stay Loyal 3",
+                    "price": 10295,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b9c94fa8-13ff-4c2e-b510-e5321d5ca4f4/jordan-stay-loyal-3-shoes-GNHN2X.png"
+                },
+                {
+                    "id": 205,
+                    "name": "Jordan Max Aura 5",
+                    "price": 11895,
+                    "category": "men",
+                    "image": ""
+                }
+            ]
+        },
+        "running": {
+            "products": [
+                {
+                    "id": 301,
+                    "name": "Nike Pegasus",
+                    "price": 22795,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/58009243-4900-4f63-bd33-9cced3d445cc/pegasus-41-blueprint-road-running-shoes-9ln3lK.png"
+                },
+                {
+                    "id": 302,
+                    "name": "Nike Alphafly",
+                    "price": 11895,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/2510d422-5eac-4321-8bb6-38015c9fd5a3/alphafly-3-blueprint-road-racing-shoes-QrjGRL.png"
+                },
+                {
+                    "id": 303,
+                    "name": "Nike Infinity",
+                    "price": 14995,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b7aee96c-ab9a-4d3f-af4d-a79a50a06ec5/infinityrn-4-blueprint-road-running-shoes-nrNvsn.png"
+                },
+                {
+                    "id": 304,
+                    "name": "Nike Invincible",
+                    "price": 16995,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/dc7cfec8-8653-43e9-9c94-c37e3ec93ae6/invincible-3-blueprint-road-running-shoes-qql6pp.png"
+                },
+                {
+                    "id": 305,
+                    "name": "Nike Vaporfly",
+                    "price": 20695,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/9fe70154-e4bb-4bcc-9cf0-2efda240916c/vaporfly-3-road-racing-shoes-xsDgvM.png"
+                },
+                {
+                    "id": 306,
+                    "name": "Nike Structure",
+                    "price": 11895,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/3c823648-42b3-4ced-ba66-c5a2a1cbb937/structure-25-road-running-shoes-Vnp1d0.png"
+                },
+                {
+                    "id": 307,
+                    "name": "Nike Winflo",
+                    "price": 8695,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/87d9edbd-b30c-4bed-bd77-0f29be87fd14/wio-11-road-running-shoes-2SNS3P.png"
+                },
+                {
+                    "id": 308,
+                    "name": "Nike Vomero",
+                    "price": 14995,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/02c25b2b-77db-4e3c-82d6-f8d8ef356898/vomero-17-road-running-shoes-0DbNrf.png"
+                }
+            ]
+        },
+        "football": {
+            "products": [
+                {
+                    "id": 401,
+                    "name": "Nike Mercurial Vapor 16",
+                    "price": 21995,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/190f32e9-691a-4ae3-a4ea-555353c3e5dd/mercurial-vapor-16-elite-blueprint-fg-low-top-football-boot-STcMzc.png"
+                },
+                {
+                    "id": 402,
+                    "name": "Nike Phantom GX2",
+                    "price": 7995,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/2ff5f7f0-05f2-4c0a-9cbf-a466b834762b/phantom-gx-2-elite-fg-low-top-football-boot-8JGqj6.png"
+                },
+                {
+                    "id": 403,
+                    "name": "Nike Tiempo Legend 10",
+                    "price": 8995,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/75319ff1-e875-4391-9ccb-62517be3963d/tiempo-legend-10-academy-mg-low-top-football-boot-gthDNJ.png"
+                },
+                {
+                    "id": 404,
+                    "name": "Nike Phantom Luna2 Academy",
+                    "price": 7495,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/d03f266b-f27a-492a-a038-bc49fe2c0bcc/phantom-luna-2-academy-mg-high-top-football-boot-15SPD6.png"
+                },
+                {
+                    "id": 405,
+                    "name": "Nike Tiempo Emerald Legend 10",
+                    "price": 8495,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/95c47569-c74e-4ed6-a1ce-8bb6e812e0ac/tiempo-emerald-legend-10-academy-mg-low-top-football-boot-10hQTM.png"
+                },
+                {
+                    "id": 406,
+                    "name": "Nike Superfly 9",
+                    "price": 25095,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/bb40352b-540b-4437-b32f-fa0525626bd6/superfly-9-elite-mercurial-dream-speed-fg-high-top-football-boot-0hlF4x.png"
+                }
+            ]
+        },
+        "air_jordan": {
+            "products": [
+                {
+                    "id": 501,
+                    "name": "Air Jordan 13 Retro 'Dune Red'",
+                    "price": 20000,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/312b0732-3206-40fa-b578-7bfb62c0675a/air-jordan-1-retro-high-og-shoes-Pz6fZ9.png"
+                },
+                {
+                    "id": 502,
+                    "name": "Air Jordan 1 Low SE",
+                    "price": 13999,
+                    "category": "men",
+                    "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/d3123e79-53e5-4a03-aa5b-fbc5c18b9bfd/air-jordan-1-low-shoes-459b4T.png"
+                },
+                {
+                    "id": 503,
+                    "name": "Air Jordan 6 Retro 'White/Black'",
+                    "price": 20999,
+                    "category": "men",
+                    "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/d3123e79-53e5-4a03-aa5b-fbc5c18b9bfd/air-jordan-1-low-shoes-459b4T.png"                },
+                {
+                    "id": 504,
+                    "name": "Air Jordan 1 Mid",
+                    "price": 13999,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/21e688dc-96a9-4cc6-8f14-bcce5b9798a9/air-jordan-1-mid-se-shoes-JFn5S2.png"
+                }
+            ]
+        }
+    }
+}
