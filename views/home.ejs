@@ -1,2 +1,33 @@
 <%- include ("./boiler.ejs") %>
 <%- include ("./header.ejs") %>
+
+<link rel="stylesheet" href="/files/home.css">
+
+
+<div class="home1">
+    <h1 id="headings">WIN ON AIR</h1>
+    <p>Meet the next generation of Nike Air. Engineered to exact specifications of champion athletes.</p>
+    <button class="bt1">Shop Air</button>
+</div>
+<div class="home2">
+    <% for ( let i of air){%>
+    <div class="shoeH2">
+        <img src="<%=i.image%>" alt="img" id="shoesH2image">
+        <h2><%=i.name%></h2>
+    </div>
+    <%}%>
+</div>
+
+<div class="home4">
+    <h3>Don't Miss</h3>
+    <img src="/assets/jordan.png" alt="jordan" id="jordan-promo">
+</div>
+<div class="home5">
+    <h3>Jordan Women</h3>
+    <h1 id="headings">WOMEN'S SPORT</h1>
+    <p>Take the Court in sporty pieces designed to keep up the pace. Lightweight mesh and 
+        a light pop of blue on top pairs perfectly with classic hoop shorts for a look that 
+        lets you get after it in a style.
+    </p>
+    <button class="bt1">Shop</button>
+</div>

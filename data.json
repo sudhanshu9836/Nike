@@ -221,6 +221,52 @@
                     "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/21e688dc-96a9-4cc6-8f14-bcce5b9798a9/air-jordan-1-mid-se-shoes-JFn5S2.png"
                 }
             ]
+        },
+        "air":{
+            "products":[
+                {
+                    "id": 601,
+                    "name": "Nike Pegasus 41",
+                    "price": 22795,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/58009243-4900-4f63-bd33-9cced3d445cc/pegasus-41-blueprint-road-running-shoes-9ln3lK.png"
+                },
+                {
+                    "id": 602,
+                    "name": "Nike Alphafly 3",
+                    "price": 11895,
+                    "category": "men",
+                    "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/2510d422-5eac-4321-8bb6-38015c9fd5a3/alphafly-3-blueprint-road-racing-shoes-QrjGRL.png"
+                },
+                {
+                    "id":603,
+                    "name":"Nike Hustle GT 3",
+                    "price": 17495,
+                    "category":"men",
+                    "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b99c1521-3566-47dc-bd39-17a37b62602c/gt-hustle-3-blueprint-ep-basketball-shoes-gLwVc4.png"
+                },
+                {
+                    "id":604,
+                    "name":"Nike Mercurial Superfly",
+                    "price": 17495,
+                    "category":"men",
+                    "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f02453d3-7589-4c91-b86c-6f2262153eac/mercurial-superfly-10-elite-blueprint-fg-high-top-football-boot-bw1xLJ.png"
+                },
+                {
+                    "id":605,
+                    "name":"Nike Pegasus EasyOn",
+                    "price": 11895,
+                    "category":"men",
+                    "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/c8294970-6e75-49cc-8334-dc15bb827a57/pegasus-easyon-blueprint-road-running-shoes-qsKFJB.png"
+                },
+                {
+                    "id":606,
+                    "name":"Nike Mercurial Vapor 16",
+                    "price": 21995,
+                    "category":"men",
+                    "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/190f32e9-691a-4ae3-a4ea-555353c3e5dd/mercurial-vapor-16-elite-blueprint-fg-low-top-football-boot-STcMzc.png"
+                }              
+            ]
         }
     }
 }
