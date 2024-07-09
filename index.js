@@ -12,7 +12,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get("/",(req,res)=>{
     const air = data.shoes.air.products;
-    res.render("home.ejs",{air});
+    const latest = data.shoes.latest.products;
+    const classic = data.shoes.classic.products;
+    res.render("home.ejs",{air,latest,classic});
 })
 
 app.listen(port, ()=>{

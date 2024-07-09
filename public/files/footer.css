@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap');
+
+.footer{
+    margin-top: 100px;
+}
+
+.table {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 60%;
+}
+.column {
+    flex: 1;
+    margin: 0 10px;
+}
+.column h2 {
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.column ul {
+    list-style-type: none;
+    padding: 0;
+}
+.column ul li {
+    margin-bottom: 8px;
+    font-family: "Wittgenstein", serif;
+    opacity: 0.7;
+    cursor: pointer;
+}
+.column ul li:hover{
+    opacity: 1;
+}
+
+.f2 ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+#India{
+    position: relative;
+    top: 20px;
+    left: 400px;
+}

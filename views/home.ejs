@@ -11,13 +11,21 @@
 </div>
 <div class="home2">
     <% for ( let i of air){%>
-    <div class="shoeH2">
-        <img src="<%=i.image%>" alt="img" id="shoesH2image">
+    <div class="shoe">
+        <img src="<%=i.image%>" alt="img" id="shoesimage">
         <h2><%=i.name%></h2>
     </div>
     <%}%>
 </div>
-
+<h3 id="before">The Latest & Greatest</h3>
+<div class="home3">
+    <% for ( let i of latest){%>
+        <div class="shoe">
+            <img src="<%=i.image%>" alt="img" id="shoesimage">
+            <h2><%=i.name%></h2>
+        </div>
+        <%}%>
+</div>
 <div class="home4">
     <h3>Don't Miss</h3>
     <img src="/assets/jordan.png" alt="jordan" id="jordan-promo">
@@ -31,3 +39,15 @@
     </p>
     <button class="bt1">Shop</button>
 </div>
+<h3 id="before">Classic Spotlight</h3>
+<div class="home6">
+    <% for ( let i of classic){%>
+        <div class="shoe">
+            <img src="<%=i.image%>" alt="img" id="shoesimage">
+            <h2><%=i.name%></h2>
+        </div>
+        <%}%>
+</div>
+
+
+<%- include ("./footer.ejs") %>
