@@ -1,0 +1,26 @@
+.sidebar {
+    min-width: 18vmax;
+    border-right: 2px solid lightgrey;
+    height: 5vmax;
+}
+
+.sidebar h2 {
+    margin-left: 10%;
+    font-size: 2.5em;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+.side-nav a {
+    text-decoration: none;
+    margin-left: 30%;
+    font-size: 22px;
+    font-weight: 600;
+}

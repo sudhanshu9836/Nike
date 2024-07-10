@@ -9,7 +9,9 @@ app.set("view engine","ejs");
 app.set("views", path.join(__dirname,"/views"));
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+app.get("/shoes", (req,res)=>{
+    res.render("shoes.ejs", {data});
+})
 app.get("/",(req,res)=>{
     const air = data.shoes.air.products;
     const latest = data.shoes.latest.products;

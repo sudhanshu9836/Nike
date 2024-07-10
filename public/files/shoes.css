@@ -1,0 +1,32 @@
+.side-main {
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    left: 0;
+}
+
+
+
+.content {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    height: 100vw;
+}
+.content::-webkit-scrollbar{
+    display: none;
+}
+.shoe-each{
+    margin: 15px;
+    cursor: pointer;
+}
+.shoe-each p{
+    margin: -5px 0px;
+    color: gray;
+}
+.shoe-each img{
+    height: 23vmax;
+    width: 23vmax;
+    border-radius: 20px;
+}
