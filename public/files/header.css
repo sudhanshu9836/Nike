@@ -8,6 +8,7 @@
 #header-logo{
     height: 5vmax;
     width: 5vmax;
+    cursor: pointer;
 }
 /*  */
 .categories{

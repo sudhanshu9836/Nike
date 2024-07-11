@@ -13,14 +13,14 @@ app.get("/shoes", (req,res)=>{
     res.render("shoes.ejs", {data});
 })
 
-// app.get("/shoes/:domCategory", (req,res)=>{
-//     let category = req.params.domCategory;
-//     let shoeData = null;
-//     if (data.shoes.hasOwnProperty(category)){
-//         shoeData = data.shoes[category].products
-//     }
-//     res.render("shoeCategoryPage.ejs", {shoeData});
-// })
+app.get("/shoes/:domCategory", (req,res)=>{
+    let category = req.params.domCategory;
+    let shoeData = null;
+    if (data.shoes.hasOwnProperty(category)){
+        shoeData = data.shoes[category].products
+    }
+    res.render("shoeCategoryPage.ejs", {shoeData});
+})
 
 function findShoeById(id){
     for(let category in data.shoes){

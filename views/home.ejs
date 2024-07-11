@@ -11,19 +11,27 @@
 </div>
 <div class="home2">
     <% for ( let i of air){%>
-    <div class="shoe">
-        <img src="<%=i.image%>" alt="img" id="shoesimage">
-        <h2><%=i.name%></h2>
-    </div>
+        <form action="http://localhost:8080/shoes/shoe/<%=i.id%>">
+            <button type="submit" style="background: none; border: none; padding: 0;">
+                <div class="shoe">
+                    <img src="<%=i.image%>" alt="img" id="shoesimage">
+                    <h2><%=i.name%></h2>
+                </div>
+            </button>
+        </form>
     <%}%>
 </div>
 <h3 id="before">The Latest & Greatest</h3>
 <div class="home3">
     <% for ( let i of latest){%>
+        <form action="http://localhost:8080/shoes/shoe/<%=i.id%>">
+            <button type="submit" style="background: none; border: none; padding: 0;">
         <div class="shoe">
             <img src="<%=i.image%>" alt="img" id="shoesimage">
             <h2><%=i.name%></h2>
         </div>
+        </button>
+        </form>
         <%}%>
 </div>
 <div class="home4">
@@ -42,10 +50,13 @@
 <h3 id="before">Classic Spotlight</h3>
 <div class="home6">
     <% for ( let i of classic){%>
+        <form action="http://localhost:8080/shoes/shoe/<%=i.id%>">
+            <button type="submit" style="background: none; border: none; padding: 0;">
         <div class="shoe">
             <img src="<%=i.image%>" alt="img" id="shoesimage">
             <h2><%=i.name%></h2>
         </div>
+        </button></form>
         <%}%>
 </div>
 

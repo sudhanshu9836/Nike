@@ -1,3 +1,4 @@
+<%- include("./boiler.ejs") %>
 <%- include("./header.ejs") %>
 <link rel="stylesheet" href="./files/shoes.css">
 <div class="side-main">
@@ -5,12 +6,15 @@
   <div class="content">
     <% for(let category of Object.values(data.shoes)) { %>
       <% for(let product of category.products) { %>
+        <form action="http://localhost:8080/shoes/shoe/<%=product.id%>">
+          <button type="submit" style="background: none; border: none; padding: 0;">
         <div class="shoe-each">
           <img src="<%= product.image %>" alt="<%= product.name %>">
           <h4><%= product.name %></h4>
           <p><%= product.category.charAt(0).toUpperCase() + product.category.slice(1).toLowerCase();%>'s Shoes</p>
           <h3>MRP : &#8377;<%= product.price %></h3>
         </div>
+        </button></form>
       <% } %>
     <% } %>
   </div>
