@@ -12,6 +12,33 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get("/shoes", (req,res)=>{
     res.render("shoes.ejs", {data});
 })
+
+// app.get("/shoes/:domCategory", (req,res)=>{
+//     let category = req.params.domCategory;
+//     let shoeData = null;
+//     if (data.shoes.hasOwnProperty(category)){
+//         shoeData = data.shoes[category].products
+//     }
+//     res.render("shoeCategoryPage.ejs", {shoeData});
+// })
+
+function findShoeById(id){
+    for(let category in data.shoes){
+        for (let product of data.shoes[category].products){
+            if(product.id == id){
+                return product;
+            }
+        }
+    }
+    return null;
+}
+app.get("/shoes/shoe/:domId",(req,res)=>{
+    let id = req.params.domId;
+    const shoe = findShoeById(id);
+    console.log(shoe.name);
+    res.render("singleShoe.ejs", {shoe});
+})
+
 app.get("/",(req,res)=>{
     const air = data.shoes.air.products;
     const latest = data.shoes.latest.products;

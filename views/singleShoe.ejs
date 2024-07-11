@@ -1,0 +1,95 @@
+<%- include ("./header.ejs") %>
+<link rel="stylesheet" href="./file/singleShoe.css">
+<div class="shoe-content">
+    <div class="left-section">
+        <img src="<%=shoe.image%>" alt="img" id="main-shoe">
+    </div>
+    <div class="right-section">
+        <p id="shoe-name"><%=shoe.name%></p>
+        <p id="shoe-cat"><%=shoe.category.toUpperCase()%>'S SHOES</p>
+        <p id="shoe-price">MRP : <span>&#8377;<%=shoe.price%> </span><br/> inclusive of taxes</p>\
+        <p>Select size</p>
+        <div class="shoe-size">
+            <% for (let i = 6; i<=12; i=i+0.5){%>
+                <div class="box-of-size">
+                    <p>UK <%=i%></p>
+                </div>
+            <%}%>
+        </div>
+        <button id="bt2">Add to bag</button>
+        <button id="bt3">Favourite <i class="fa-regular fa-heart"></i></button>
+    </div>
+</div>
+
+<%- include ("./footer.ejs") %>
+
+
+<style>
+    .shoe-content{
+    display: flex;
+    justify-content: space-around;
+    margin: 8vmax 0vmax;
+}
+#main-shoe{
+    height: 50vmax;
+    width: 40vmax;
+    border-radius: 10px;
+}
+.right-section{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#shoe-name{
+    font-size: 2em;
+    margin: 0;
+}
+#shoe-cat{
+    color: gray;
+}
+#shoe-price{
+    font-size: 1.2em;
+}
+#shoe-price span{
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 15px;
+}
+.shoe-size{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+.box-of-size{
+    height: 4vmax;
+    width: 7.5vmax;
+    margin: 20px 10px;
+    border: 2px solid lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.box-of-size:hover{
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px orange;
+}
+#bt2{
+    width:20vmax;
+    height: 3vmax;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+}
+#bt3{
+    width:20vmax;
+    height: 3vmax;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: white;
+    margin-top: 20px;
+}
+</style>

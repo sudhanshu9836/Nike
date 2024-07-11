@@ -1,0 +1,17 @@
+<%- include("./header.ejs") %>
+<link rel="stylesheet" href="./files/shoes.css">
+
+<div class="main-content">
+    <%- include("./sidebar.ejs") %>
+    <div class="content">
+        <% for(let product of Object.values(shoeData)) { %>
+              <div class="shoe-each">
+                <img src="<%= product.image %>" alt="<%= product.name %>">
+                <h4><%= product.name %></h4>
+                <p><%= product.category.charAt(0).toUpperCase() + product.category.slice(1).toLowerCase();%>'s Shoes</p>
+                <h3>MRP : &#8377;<%= product.price %></h3>
+              </div>
+            <% } %>
+    </div>
+</div>
+<%- include("./footer.ejs") %>
