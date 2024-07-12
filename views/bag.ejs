@@ -1,0 +1,99 @@
+<%- include ("./boiler.ejs") %>
+<%- include ("./header.ejs") %>
+<div class="bag">
+    <div class="left-bag">
+        <h2>Bag</h2>
+        <% let sum = 0%>
+        <% for (let product of bag ){ %>
+            <div class="bag-shoe">
+                <div class="bag-shoe-left">
+                    <img src="<%=product.image%>" alt="img" id="bag-img">
+                    <div class="bag-shoe-desc">
+                        <h3 id="bag-name"><%=product.name%></h3>
+                        <p id="bag-cat"><%=product.category.charAt(0).toUpperCase()+product.category.slice(1)%>'s Shoes</p>
+                        <p>Size </p>
+                        <p>Quantity</p>
+                        <div class="shoe-icons">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bag-shoe-right">
+                    <p>MRP : &#8377; <%=product.price%></p>
+                    <% let a = product.price;
+                    a = a.replace (/,/g,'');
+                    let b = Number (a);
+                    sum = sum + b  %>
+                </div>
+            </div>
+            <%}%>
+    </div>
+    <div class="right-bag">
+        <h1>Summary</h1>
+        <div class="right-bag-content">
+        <div class="right-bag-left">
+            <p>Subtotal</p>
+            <p>Delivery & <br> Handling Charges</p>
+            <hr>
+            <p>Total :  </p>
+            <hr>
+        </div>
+        <div class="right-bar-right">
+            <p><%=sum%></p>
+            <p>1000 <br><br>
+            </p>
+            <hr>
+            <p><%=sum+1000%></p>
+            <hr>
+        </div>
+        </div>
+        <button id="bt4">Checkout</button>
+    </div>
+</div>
+<%- include ("./footer.ejs") %>
+
+<style>
+    .bag{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 4vmax;
+    }
+    .left-bag{
+        display: flex;
+        flex-direction: column;
+    }
+    .bag-shoe{
+        height: 15vmax;
+        width: 50vmax;
+        display: flex;
+        border: 2px solid lightgray;
+        border-radius: 10px;
+        margin: 1.5vmax 0;
+    }
+    #bag-img{
+        margin-right: 2vmax;
+        height: 15vmax;
+        width: 15vmax;
+    }
+    .bag-shoe-left{
+        display: flex;
+        margin-right: 5vmax;
+    }
+    .right-bag-content{
+        display: flex;
+        justify-content: space-between;
+    }
+    #bt4{
+    height: 3vmax;
+    width: 10vmax;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #111111;
+    color: white;
+    margin: 5vmax 0vmax;
+    }
+    #bt4:hover{
+        background-color: gray;
+    }
+</style>

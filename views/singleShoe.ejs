@@ -17,7 +17,10 @@
                 </div>
             <%}%>
         </div>
-        <button id="bt2">Add to bag</button>
+        <form action="http://localhost:8080/bag" method="post">
+            <input type="hidden" name="idOfShoe" value="<%=shoe.id%>">
+            <button id="bt2">Add to bag</button>
+        </form>
         <button id="bt3">Favourite <i class="fa-regular fa-heart"></i></button>
     </div>
 </div>

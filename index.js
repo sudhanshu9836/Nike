@@ -2,7 +2,8 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const data = require("./data.json")
-
+const bag = [];
+app.use(express.urlencoded({ extended: true }));
 let port = 8080;
 
 app.set("view engine","ejs");
@@ -37,6 +38,17 @@ app.get("/shoes/shoe/:domId",(req,res)=>{
     const shoe = findShoeById(id);
     console.log(shoe.name);
     res.render("singleShoe.ejs", {shoe});
+})
+
+
+app.post("/bag",(req,res)=>{
+    const id = req.body.idOfShoe;
+    const shoe = findShoeById(id);
+    bag.push(shoe);
+    res.render("bag.ejs", {bag})
+})
+app.get("/bag", (req,res)=>{
+    res.render("bag.ejs",{bag});
 })
 
 app.get("/",(req,res)=>{
