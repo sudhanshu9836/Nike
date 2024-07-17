@@ -1,0 +1,49 @@
+    .bag{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 4vmax;
+    }
+    .left-bag{
+        display: flex;
+        flex-direction: column;
+    }
+    .bag-shoe{
+        height: 15vmax;
+        width: 50vmax;
+        display: flex;
+        border: 2px solid lightgray;
+        border-radius: 10px;
+        margin: 1.5vmax 0;
+    }
+    #bag-img{
+        margin-right: 2vmax;
+        height: 15vmax;
+        width: 15vmax;
+    }
+    .bag-shoe-left{
+        display: flex;
+        margin-right: 5vmax;
+    }
+    .right-bag-content{
+        display: flex;
+        justify-content: space-between;
+    }
+    #bt4{
+    height: 3vmax;
+    width: 10vmax;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #111111;
+    color: white;
+    margin: 5vmax 0vmax;
+    }
+    #bt4:hover{
+        background-color: gray;
+    }
+    .shoe-icons{
+        display: flex;
+    }
+    .shoe-icons i{
+        margin-right: 10px;
+        font-size: 1.2em;
+    }

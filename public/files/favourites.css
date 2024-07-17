@@ -1,0 +1,34 @@
+.favs{
+    margin-top: 7vmax;
+}
+.favs h1{
+    text-align: center;
+}
+.fav-content{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0vmax 10%;
+}
+.fav-shoe-box{
+    height: 20vmax;
+    width: 20vmax;
+    margin: 3vmax 3vmax;
+}
+#fav-img{
+    height: 20vmax;
+    width: 20vmax;
+    border-radius: 5px;
+}
+.fav-shoe-box-desc{
+    display: flex;
+    justify-content: space-between;
+    margin: -5px 5%;
+}
+
+/* #dislike{
+    position: relative;
+    bottom: 19vmax;
+    left: 17vmax;
+    color: red;
+    cursor: pointer;
+} */

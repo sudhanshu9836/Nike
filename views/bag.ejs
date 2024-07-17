@@ -1,5 +1,6 @@
 <%- include ("./boiler.ejs") %>
 <%- include ("./header.ejs") %>
+<link rel="stylesheet" href="./files/bag.css">
 <div class="bag">
     <div class="left-bag">
         <h2>Bag</h2>
@@ -14,8 +15,17 @@
                         <p>Size </p>
                         <p>Quantity</p>
                         <div class="shoe-icons">
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-solid fa-trash"></i>
+                            <form action="http://localhost:8080/favourites" method="post">
+                                <input type="hidden" name="idOfFavShoe" value="<%=product.id%>">
+                                <button style="border: none; background: none; padding: 0; cursor: pointer;">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button></form>
+                            </form>
+                            <form action="http://localhost:8080/bag/<%=product.id%>?_method=DELETE" method="post">
+                                <button style="border: none; background: none; padding: 0; cursor: pointer;">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </form>                            
                         </div>
                     </div>
                 </div>
@@ -53,47 +63,3 @@
 </div>
 <%- include ("./footer.ejs") %>
 
-<style>
-    .bag{
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: 4vmax;
-    }
-    .left-bag{
-        display: flex;
-        flex-direction: column;
-    }
-    .bag-shoe{
-        height: 15vmax;
-        width: 50vmax;
-        display: flex;
-        border: 2px solid lightgray;
-        border-radius: 10px;
-        margin: 1.5vmax 0;
-    }
-    #bag-img{
-        margin-right: 2vmax;
-        height: 15vmax;
-        width: 15vmax;
-    }
-    .bag-shoe-left{
-        display: flex;
-        margin-right: 5vmax;
-    }
-    .right-bag-content{
-        display: flex;
-        justify-content: space-between;
-    }
-    #bt4{
-    height: 3vmax;
-    width: 10vmax;
-    border-radius: 50px;
-    cursor: pointer;
-    background-color: #111111;
-    color: white;
-    margin: 5vmax 0vmax;
-    }
-    #bt4:hover{
-        background-color: gray;
-    }
-</style>

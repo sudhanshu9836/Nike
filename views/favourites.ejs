@@ -1,0 +1,24 @@
+<%- include ("./boiler.ejs") %>
+<%- include ("./header.ejs") %>
+<link rel="stylesheet" href="./files/favourites.css">
+
+<div class="favs">
+    <h1>Favourite</h1>
+    <div class="fav-content">
+        <%for (let i of fav){%>
+            <%if(i){%>
+            <form action="http://localhost:8080/shoes/shoe/<%=i.id%>">
+                <button type="submit" style="background: none; border: none; padding: 0; cursor: pointer;">
+            <div class="fav-shoe-box">
+                <img src="<%=i.image%>" alt="" id="fav-img">
+                <div class="fav-shoe-box-desc">
+                    <p><%=i.name%></p>
+                    <p><%=i.price%></p> 
+                </div>
+            </div>
+            </button></form>
+            <%}%>
+            <%}%>
+    </div>
+</div>
+<%- include ("./footer.ejs") %>
