@@ -1,7 +1,7 @@
 .sidebar {
     min-width: 18vmax;
     border-right: 2px solid lightgrey;
-    height: 5vmax;
+    height: 10vmax;
 }
 
 .sidebar h2 {
@@ -23,4 +23,52 @@
     margin-left: 30%;
     font-size: 22px;
     font-weight: 600;
+}
+
+/* Media Queries */
+
+@media screen and (max-width:1000px){
+
+    .side-nav, .sidebar{
+        display: flex;
+        flex-direction: row;
+    }
+    .side-nav a{
+        margin: 3vmax 4vmax;
+        color: black;
+        height: auto;
+    }
+    .sidebar h2{
+        display: none;
+    }
+}
+
+@media  screen and (max-width: 750px) {
+    #air-jordan{
+        display: none;
+    }
+}
+@media  screen and (max-width: 600px) {
+    .side-nav a {
+        margin: 2vmax 2vmax;
+    }
+}
+@media  screen and (max-width: 450px) {
+    .side-nav a {
+        margin: -2.5vmax 1vmax;
+        transform: scale(0.9);
+    }
+}
+@media  screen and (max-width: 375px) {
+    .side-nav a {
+        margin: -8vmax 0vmax;
+        transform: scale(0.8);
+    }
+}
+@media  screen and (max-width: 300px) {
+    .side-nav a {
+        margin-top: -32vmax;
+        margin-left: -1vmax;
+        transform: scale(0.5);
+    }
 }

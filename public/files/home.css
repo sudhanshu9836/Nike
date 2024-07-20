@@ -21,8 +21,8 @@ button{
 }
 .bt1{
     height: 2.5vmax;
-    width: 6vmax;
-    margin-left: 48%;
+    width: 9vmax;
+    margin-left: 45%;
     border-radius: 50px;
     cursor: pointer;
     background-color: #111111;
@@ -128,4 +128,54 @@ button{
 .home3:hover::-webkit-scrollbar-thumb,
 .home6:hover::-webkit-scrollbar-thumb {
     background: #555; 
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width:900px){
+    .bt1{
+        height: 4vmax;
+        width: 12vmax;
+    }
+}
+
+@media screen and (max-width: 400px){
+    h1{
+        transform: scale(0.8);
+    }
+    .shoe{
+        transform: scale(0.8);
+        margin: 0vmax;
+    }
+    #before{
+        margin-top: 0;
+        margin-left: 0;
+        font-size: 1.3em;
+        text-align: center;
+    }
+    .home4{
+        margin-top: 10px;
+    }
+    .home5 button{
+        margin-bottom: 8vmax;
+    }
+    .home1{
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+    #headings{
+        margin-top: 0px;
+        margin-left: -5vmax;
+    }
+}
+@media screen and (max-width: 276px){
+    h1{
+        transform: scale(0.6);
+        margin-bottom: 10px;
+    }
+    .bt1{
+        margin-left: 30%;
+    }
+    
 }

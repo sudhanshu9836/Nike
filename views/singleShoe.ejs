@@ -98,4 +98,36 @@
     background-color: white;
     margin-top: 20px;
 }
+@media screen and (max-width: 650px){
+    .box-of-size{
+        height: auto;
+    }
+    #shoe-name{
+        margin-left: 4vmax;
+    }
+    #bt2, #bt3{
+        height: 4.5vmax;
+    }
+}
+@media screen and (max-width: 500px){
+    .shoe-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .right-section{
+        width: 90%;
+        margin-top: 2vmax;
+    }
+    .shoe-size{
+        margin-left: 20px;
+    }
+    .box-of-size{
+        height: 8vmax;
+        width: 10vmax;
+    }
+    .box-of-size p{
+        transform: scale(0.8);
+    }
+}
 </style>

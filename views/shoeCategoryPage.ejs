@@ -80,6 +80,87 @@
         width: 23vmax;
         border-radius: 20px;
     }
-    
+    /* Copied temporarly */
+
+    @media screen and (max-width:1000px){
+
+.side-nav, .sidebar{
+    display: flex;
+    flex-direction: row;
+}
+.side-nav a{
+    margin: 3vmax 4vmax;
+    color: black;
+    height: auto;
+}
+.sidebar h2{
+    display: none;
+}
+}
+
+@media  screen and (max-width: 750px) {
+#air-jordan{
+    display: none;
+}
+}
+@media  screen and (max-width: 600px) {
+.side-nav a {
+    margin: 2vmax 2vmax;
+}
+}
+@media  screen and (max-width: 450px) {
+.side-nav a {
+    margin: -2.5vmax 1vmax;
+    transform: scale(0.9);
+}
+}
+@media  screen and (max-width: 375px) {
+.side-nav a {
+    margin: -8vmax 0vmax;
+    transform: scale(0.8);
+}
+}
+@media  screen and (max-width: 300px) {
+.side-nav a {
+    margin-top: -32vmax;
+    margin-left: -1vmax;
+    transform: scale(0.5);
+}
+}
+@media screen and (max-width:1000px){
+    .main-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar{
+        height: 10vmax;
+        border-bottom: 2px solid lightgray;
+    }
+}
+
+@media screen and (max-width:600px){
+    .content{
+        overflow-y: visible;
+        height: auto;
+       
+    }
+    .shoe-each{
+        margin: 15px 38px;
+    }
+}
+@media screen and (max-width:504px){
+    .shoe-each{
+        margin: 15px 12px;
+    }
+}
+
+
+@media screen and (max-width:400px){
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
     </style>
     

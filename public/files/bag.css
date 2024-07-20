@@ -28,6 +28,13 @@
         display: flex;
         justify-content: space-between;
     }
+    .bt5{
+        width: 100%;
+        cursor: pointer;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+    }
     #bt4{
     height: 3vmax;
     width: 10vmax;
@@ -42,8 +49,77 @@
     }
     .shoe-icons{
         display: flex;
+        margin-top: 1vmax;
     }
     .shoe-icons i{
         margin-right: 10px;
         font-size: 1.2em;
     }
+
+    /* Media Queries */
+    @media screen and (max-width:1300px){
+        .bag-shoe{
+            height: auto;
+            width: auto;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+        .bag-shoe p{
+            margin: 12px;
+        }
+        .left-bag{
+            width: 70%;
+        }
+        #bag-img{
+        height: 100%;
+        width: 16vmax;
+        }
+        .shoe-icons{
+        position: absolute;
+        right: 10px;
+        bottom: 20px;
+        }
+    }
+    @media screen and (max-width:1000px){
+        .bag{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+}
+    @media screen and (max-width:600px){
+        .left-bag{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .bag-shoe-left{
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            margin-right: 0;
+        }
+        .bag-shoe{
+            height: auto;
+            width: 18vmax;
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            border: none;
+            border: 2px solid lightgray;
+            margin: 5vmax 0vmax;
+        }
+        #bag-img{
+            width: 18vmax;
+            margin-right: 0px;
+        }
+        .right-bag{
+            margin-top: 10vmax;
+        }
+        .shoe-icons{
+            position: absolute;
+            top: 2px;
+        }
+    } 

@@ -8,6 +8,19 @@ const sales = document.getElementById("sale");
 const custom = document.getElementById("customise");
 
 
+const nav = document.getElementById("navigation-bar");
+nav.style.display = "none";
+const bar = document.getElementById("bar-icon");
+
+bar.addEventListener("click",()=>{
+    if(nav.style.display == "none"){
+        nav.style.display = "block";
+    }
+    else{
+        nav.style.display = "none";
+    }
+})
+
 // New and Featured
 
 newFeatured.addEventListener("mouseover", () => {
