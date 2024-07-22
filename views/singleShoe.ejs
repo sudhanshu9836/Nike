@@ -16,6 +16,12 @@
                 </div>
             <%}%>
         </div>
+        <div class="quantity">
+            <span>Quantity</span>
+            <button id="decQuant">-</button>
+            <span id="quant-var"><%=q%></span>
+            <button id="incQuant">+</button>
+        </div>
         <form action="http://localhost:8080/bag" method="post">
             <input type="hidden" name="idOfShoe" value="<%=shoe.id%>">
             <button id="bt2">Add to bag</button>
@@ -28,13 +34,19 @@
 </div>
 
 <%- include ("./footer.ejs") %>
-
-
+<script>
+    document.getElementById(incQuant).addEventListener("click", (req,res)=>{
+        q++;
+    })
+</script>
 <style>
     .shoe-content{
     display: flex;
     justify-content: space-around;
     margin: 8vmax 0vmax;
+}
+button{
+    cursor: pointer;
 }
 #main-shoe{
     height: 50vmax;
@@ -80,6 +92,17 @@
 .box-of-size:hover{
     border: 2px solid black;
     box-shadow: 2px 2px 2px orange;
+}
+.quantity{
+    margin: 2vmax 0vmax;
+}
+.quantity button{
+    background-color: white;
+    color: green;
+    border-radius: 5px;
+}
+.quantity span:first-of-type{
+    margin-right: 1.5vmax;
 }
 #bt2{
     width:20vmax;

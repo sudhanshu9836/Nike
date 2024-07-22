@@ -56,6 +56,63 @@
         font-size: 1.2em;
     }
 
+    button{
+       cursor: pointer;
+    }
+    /* Modal Styling */
+    .checkout{
+    display: flex;
+    flex-direction: column;
+    padding: 2vmax;
+    height: auto;
+    width: 43vmax;
+    position: relative;
+    border-radius: 10px;
+    }
+
+    .checkout input{
+    height: 3vmax;
+    width: 40vmax;
+    margin: 1vmax;
+    font-size: 1.2em;
+    padding: 1vmax;
+    border-radius: 10px;
+    }
+
+    #bt7{
+    height: 3vmax;
+    width: 20vmax;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    margin-top: 2vmax;
+    margin-left: 25%;
+    border-radius: 20px;
+    }
+    #bt7:hover{
+    background-color: orange;
+    color: black;
+    }
+
+    #close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-bottom: 3vmax;
+    border-radius: 30px;
+    background-color: red;
+    color: white;
+    }
+    dialog{
+        height: 90%;
+        border-radius: 20px;
+    }
+    dialog::-webkit-scrollbar{
+        display: none;
+    }
+
     /* Media Queries */
     @media screen and (max-width:1300px){
         .bag-shoe{

@@ -40,7 +40,8 @@ function findShoeById(id){
 app.get("/shoes/shoe/:domId",(req,res)=>{
     let id = req.params.domId;
     const shoe = findShoeById(id);
-    res.render("singleShoe.ejs", {shoe});
+    let q = 1;
+    res.render("singleShoe.ejs", {shoe, q});
 })
 
 
@@ -70,7 +71,6 @@ app.post("/favourites", (req, res) => {
     }
     res.render("favourites.ejs", { fav });
 });
-
 
 app.get("/",(req,res)=>{
     const air = data.shoes.air.products;
