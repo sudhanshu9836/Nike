@@ -5,23 +5,23 @@
     <div class="left-bag">
         <h2>Bag</h2>
         <% let sum = 0%>
-        <% for (let product of bag ){ %>
+        <% for (let item of bag ){ %>
             <div class="bag-shoe">
                 <div class="bag-shoe-left">
-                    <img src="<%=product.image%>" alt="img" id="bag-img">
+                    <img src="<%=item.product.image%>" alt="img" id="bag-img">
                     <div class="bag-shoe-desc">
-                        <h3 id="bag-name"><%=product.name%></h3>
-                        <p id="bag-cat"><%=product.category.charAt(0).toUpperCase()+product.category.slice(1)%>'s Shoes</p>
+                        <h3 id="bag-name"><%=item.product.name%></h3>
+                        <p id="bag-cat"><%=item.product.category.charAt(0).toUpperCase()+item.product.category.slice(1)%>'s Shoes</p>
                         <p>Size </p>
-                        <p>Quantity</p>
+                        <p>Quantity : <%=item.quantity%></p>
                         <div class="shoe-icons">
                             <form action="http://localhost:8080/favourites" method="post">
-                                <input type="hidden" name="idOfFavShoe" value="<%=product.id%>">
+                                <input type="hidden" name="idOfFavShoe" value="<%=item.product.id%>">
                                 <button style="border: none; background: none; padding: 0; cursor: pointer;">
                                     <i class="fa-regular fa-heart"></i>
                                 </button></form>
                             </form>
-                            <form action="http://localhost:8080/bag/<%=product.id%>?_method=DELETE" method="post">
+                            <form action="http://localhost:8080/bag/<%=item.product.id%>?_method=DELETE" method="post">
                                 <button style="border: none; background: none; padding: 0; cursor: pointer;">
                                     <i class="fa-solid fa-trash"></i>
                                 </button>
@@ -30,11 +30,13 @@
                     </div>
                 </div>
                 <div class="bag-shoe-right">
-                    <p>MRP : &#8377; <%=product.price%></p>
-                    <% let a = product.price;
+                    <% let q = item.quantity %>
+                    <p>MRP : &#8377; <%=item.product.price%></p>
+                    <% let a = item.product.price;
                     a = a.replace (/,/g,'');
-                    let b = Number (a);
-                    sum = sum + b  %>
+                    let b = Number (a) ;
+                    let c = b*q;
+                    sum = sum + c  %>
                 </div>
             </div>
             <%}%>
@@ -66,9 +68,9 @@
 </div>
 
 <dialog id="contain">
-    <form action="">
-    <div class="checkout">
-        <button id="close">X</button>
+    <form id="contain-form">
+    <div class="checkout" id="checkout">
+        <button id="close"><i class="fa-solid fa-xmark"></i></button>
         <input type="text" id="name" placeholder="Name" required>
         <input type="number" id="contactNo" placeholder="Contact number" required>
         <input type="email" id="email" placeholder="Email" required>

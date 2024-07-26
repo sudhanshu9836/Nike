@@ -59,6 +59,7 @@
     button{
        cursor: pointer;
     }
+
     /* Modal Styling */
     .checkout{
     display: flex;
@@ -71,7 +72,7 @@
     }
 
     .checkout input{
-    height: 3vmax;
+    height: 2vmax;
     width: 40vmax;
     margin: 1vmax;
     font-size: 1.2em;

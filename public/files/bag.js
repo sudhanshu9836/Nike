@@ -1,7 +1,6 @@
 let c = document.getElementById("contain");
 let bt = document.getElementById("bt4");
 let cl = document.getElementById("close")
-// cl.style.cursor = "pointer";  
 
 bt.addEventListener("click",(req,res)=>{
         c.showModal();
@@ -9,4 +8,26 @@ bt.addEventListener("click",(req,res)=>{
 
 cl.addEventListener("click", (req,res)=>{
     c.close();
+})
+
+
+let m = document.getElementById("checkout");
+
+// Placing order
+
+let p = document.getElementById("bt7");
+
+p.addEventListener("click", (req,res)=>{
+    m.innerHTML = "Order Placed";
+    c.style.display = "flex";
+    m.style.textAlign = "center";
+    c.style.alignItems = "center" ;
+    m.style.fontSize = "2.5em";
+    // let cross = document.createElement("button");
+    // cross.innerHTML = "X";
+    // m.appendChild(cross);
+    // cross.id = "close";
+    // cross.style.position = "absolute"
+    // cross.style.top = 0;
+    // cross.style.right = 0;
 })

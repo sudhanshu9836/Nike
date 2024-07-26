@@ -24,21 +24,41 @@
         </div>
         <form action="http://localhost:8080/bag" method="post">
             <input type="hidden" name="idOfShoe" value="<%=shoe.id%>">
+            <input type="hidden" id="quantInput" name="quantity" value="<%=q%>">
             <button id="bt2">Add to bag</button>
         </form>
         <form action="http://localhost:8080/favourites" method="post">
-            <input type="hidden" name = "idOfFavShoe" value="<%=shoe.id%>">
+            <input type="hidden" name="idOfFavShoe" value="<%=shoe.id%>">
             <button id="bt3">Favourite <i class="fa-regular fa-heart"></i></button>
         </form>
     </div>
 </div>
 
-<%- include ("./footer.ejs") %>
 <script>
-    document.getElementById(incQuant).addEventListener("click", (req,res)=>{
-        q++;
-    })
+    document.addEventListener("DOMContentLoaded", () => {
+        let quantity = <%=q%>;
+        const quantityDisplay = document.getElementById("quant-var");
+        const quantityInput = document.getElementById("quantInput");
+
+        document.getElementById("incQuant").addEventListener("click", () => {
+            quantity++;
+            updateQuantity();
+        });
+
+        document.getElementById("decQuant").addEventListener("click", () => {
+            if (quantity > 1) {
+                quantity--;
+                updateQuantity();
+            }
+        });
+
+        function updateQuantity() {
+            quantityDisplay.textContent = quantity;
+            quantityInput.value = quantity;
+        }
+    });
 </script>
+
 <style>
     .shoe-content{
     display: flex;

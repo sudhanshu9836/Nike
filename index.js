@@ -47,10 +47,24 @@ app.get("/shoes/shoe/:domId",(req,res)=>{
 
 app.post("/bag",(req,res)=>{
     const id = req.body.idOfShoe;
+    const quantity = parseInt(req.body.quantity) || 1;
     const shoe = findShoeById(id);
-    bag.push(shoe);
-    res.render("bag.ejs", {bag})
+
+    let found = false;
+    for (let item of bag) {
+        if (item.product.id === id) {
+            item.quantity += quantity;
+            found = true;
+            break;
+        }
+    }
+    if (!found) {
+        bag.push({ product: shoe, quantity: quantity });
+    }
+
+    res.redirect("/bag");
 })
+
 app.get("/bag", (req,res)=>{
     res.render("bag.ejs",{bag});
 })
