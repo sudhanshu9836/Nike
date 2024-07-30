@@ -109,9 +109,18 @@
     dialog{
         height: 90%;
         border-radius: 20px;
+        position: relative;
     }
     dialog::-webkit-scrollbar{
         display: none;
+    }
+    #close2{
+        position: absolute;
+        top: -240px;
+        right: 0;
+        background-color: red;
+        border-radius: 30px;
+        color: white;
     }
 
     /* Media Queries */

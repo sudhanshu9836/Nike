@@ -1,13 +1,16 @@
 const express = require('express');
-const app = express();
+const methodOverride = require("method-override");
 const path = require('path');
 const data = require("./data.json")
+
+const link = "http://localhost:8080";
+
+const app = express();
 let bag = [];
 let fav = [];
-app.use(express.urlencoded({ extended: true }));
 let port = 8080;
 
-const methodOverride = require("method-override");
+app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
 app.set("view engine","ejs");
@@ -15,7 +18,7 @@ app.set("views", path.join(__dirname,"/views"));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get("/shoes", (req,res)=>{
-    res.render("shoes.ejs", {data});
+    res.render("shoes.ejs", {data,link});
 })
 
 app.get("/shoes/:domCategory", (req,res)=>{
@@ -24,7 +27,7 @@ app.get("/shoes/:domCategory", (req,res)=>{
     if (data.shoes.hasOwnProperty(category)){
         shoeData = data.shoes[category].products
     }
-    res.render("shoeCategoryPage.ejs", {shoeData});
+    res.render("shoeCategoryPage.ejs", {shoeData,link});
 })
 
 function findShoeById(id){
@@ -41,7 +44,7 @@ app.get("/shoes/shoe/:domId",(req,res)=>{
     let id = req.params.domId;
     const shoe = findShoeById(id);
     let q = 1;
-    res.render("singleShoe.ejs", {shoe, q});
+    res.render("singleShoe.ejs", {shoe, q, fav,link});
 })
 
 
@@ -66,16 +69,21 @@ app.post("/bag",(req,res)=>{
 })
 
 app.get("/bag", (req,res)=>{
-    res.render("bag.ejs",{bag});
+    res.render("bag.ejs",{bag,link});
 })
 app.delete("/bag/:id", (req,res)=>{
     let id = req.params.id;
     bag = bag.filter((i)=> id != i.id);
     res.redirect("/bag");
 })
+app.delete("/favourites/:id", (req, res)=>{
+    let id = req.params.id;
+    fav = fav.filter((i)=>i.id!=id);
+    res.redirect("/favourites")
+})
 
 app.get("/favourites",(req,res)=>{
-    res.render("favourites.ejs",{fav});
+    res.render("favourites.ejs",{fav,link});
 })
 app.post("/favourites", (req, res) => {
     const id = req.body.idOfFavShoe;
@@ -83,14 +91,14 @@ app.post("/favourites", (req, res) => {
     if (shoe && !fav.includes(shoe)) { 
         fav.push(shoe);
     }
-    res.render("favourites.ejs", { fav });
+    res.render("favourites.ejs", { fav,link });
 });
 
 app.get("/",(req,res)=>{
     const air = data.shoes.air.products;
     const latest = data.shoes.latest.products;
     const classic = data.shoes.classic.products;
-    res.render("home.ejs",{air,latest,classic});
+    res.render("home.ejs",{air,latest,classic,link});
 })
 
 app.listen(port, ()=>{

@@ -22,21 +22,28 @@
             <span id="quant-var"><%=q%></span>
             <button id="incQuant">+</button>
         </div>
-        <form action="http://localhost:8080/bag" method="post">
+        <form action="<%=link%>/bag" method="post">
             <input type="hidden" name="idOfShoe" value="<%=shoe.id%>">
             <input type="hidden" id="quantInput" name="quantity" value="<%=q%>">
             <button id="bt2">Add to bag</button>
         </form>
-        <form action="http://localhost:8080/favourites" method="post">
+        <% if (fav.includes(shoe)){%>
+            <form action="<%=link%>/favourites/<%=shoe.id%>?_method=DELETE" method="post">
+                <input type="hidden" name="idOfFavShoe" value="<%=shoe.id%>">
+                <button id="bt3" class="bt3A">Remove from Favourites <i class="fa-regular fa-heart"></i></button>
+            </form>
+        <%} else{%>
+        <form action="<%=link%>/favourites" method="post">
             <input type="hidden" name="idOfFavShoe" value="<%=shoe.id%>">
-            <button id="bt3">Favourite <i class="fa-regular fa-heart"></i></button>
+            <button id="bt3" class="bt3B">Favourite <i class="fa-regular fa-heart"></i></button>
         </form>
+    <%}%>
     </div>
 </div>
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
-        let quantity = <%=q%>;
+        let quantity = '<%=q%>';
         const quantityDisplay = document.getElementById("quant-var");
         const quantityInput = document.getElementById("quantInput");
 
@@ -138,9 +145,16 @@ button{
     height: 3vmax;
     border-radius: 50px;
     cursor: pointer;
-    background-color: white;
     margin-top: 20px;
 }
+.bt3B{
+    background-color: lightgray;
+}
+.bt3B:hover{
+    background-color: lightpink;
+}
+
+
 @media screen and (max-width: 650px){
     .box-of-size{
         height: auto;

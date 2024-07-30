@@ -3,5 +3,14 @@
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "method-override": "^3.0.0"
-  }
+  },
+  "name": "nike",
+  "description": "��#\u0000 \u0000N\u0000i\u0000k\u0000e\u0000\r\u0000 \u0000",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "author": "Sudhanshu Tiwari",
+  "license": "ISC"
 }

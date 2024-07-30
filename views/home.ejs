@@ -7,13 +7,13 @@
 <div class="home1">
     <h1 id="headings">WIN ON AIR</h1>
     <p>Meet the next generation of Nike Air. Engineered to exact specifications of champion athletes.</p>
-    <form action="http://localhost:8080/shoes/air">
+    <form action="<%=link%>/shoes/air">
         <button class="bt1" type="submit">Shop Air</button>
     </form>
 </div>
 <div class="home2">
     <% for ( let i of air){%>
-        <form action="http://localhost:8080/shoes/shoe/<%=i.id%>">
+        <form action="<%=link%>/shoes/shoe/<%=i.id%>">
             <button type="submit" style="background: none; border: none; padding: 0;">
                 <div class="shoe">
                     <img src="<%=i.image%>" alt="img" id="shoesimage">
@@ -26,7 +26,7 @@
 <h3 id="before">The Latest & Greatest</h3>
 <div class="home3">
     <% for ( let i of latest){%>
-        <form action="http://localhost:8080/shoes/shoe/<%=i.id%>">
+        <form action="<%=link%>/shoes/shoe/<%=i.id%>">
             <button type="submit" style="background: none; border: none; padding: 0;">
         <div class="shoe">
             <img src="<%=i.image%>" alt="img" id="shoesimage">
@@ -52,7 +52,7 @@
 <h3 id="before">Classic Spotlight</h3>
 <div class="home6">
     <% for ( let i of classic){%>
-        <form action="http://localhost:8080/shoes/shoe/<%=i.id%>">
+        <form action="<%=link%>/shoes/shoe/<%=i.id%>">
             <button type="submit" style="background: none; border: none; padding: 0;">
         <div class="shoe">
             <img src="<%=i.image%>" alt="img" id="shoesimage">

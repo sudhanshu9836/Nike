@@ -23,11 +23,8 @@ p.addEventListener("click", (req,res)=>{
     m.style.textAlign = "center";
     c.style.alignItems = "center" ;
     m.style.fontSize = "2.5em";
-    // let cross = document.createElement("button");
-    // cross.innerHTML = "X";
-    // m.appendChild(cross);
-    // cross.id = "close";
-    // cross.style.position = "absolute"
-    // cross.style.top = 0;
-    // cross.style.right = 0;
+    let cross = document.createElement("button");
+    cross.innerHTML = "X";
+    m.appendChild(cross);
+    cross.id = "close2";
 })

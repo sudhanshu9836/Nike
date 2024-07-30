@@ -15,13 +15,13 @@
                         <p>Size </p>
                         <p>Quantity : <%=item.quantity%></p>
                         <div class="shoe-icons">
-                            <form action="http://localhost:8080/favourites" method="post">
+                            <form action="<%=link%>/favourites" method="post">
                                 <input type="hidden" name="idOfFavShoe" value="<%=item.product.id%>">
                                 <button style="border: none; background: none; padding: 0; cursor: pointer;">
                                     <i class="fa-regular fa-heart"></i>
                                 </button></form>
                             </form>
-                            <form action="http://localhost:8080/bag/<%=item.product.id%>?_method=DELETE" method="post">
+                            <form action="<%=link%>/bag/<%=item.product.id%>?_method=DELETE" method="post">
                                 <button style="border: none; background: none; padding: 0; cursor: pointer;">
                                     <i class="fa-solid fa-trash"></i>
                                 </button>
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <%}%>
-            <form action="http://localhost:8080/shoes" id="add-form">
+            <form action="<%=link%>/shoes" id="add-form">
                 <button class="bt5">+</button>
             </form>
     </div>
