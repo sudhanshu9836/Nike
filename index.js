@@ -11,7 +11,7 @@ let fav = [];
 let port = 8080;
 
 app.use(express.urlencoded({ extended: true }));
-app.use(methodOverride("_method"));
+app.use(methodOverride('_method'))
 
 app.set("view engine","ejs");
 app.set("views", path.join(__dirname,"/views"));
@@ -44,13 +44,15 @@ app.get("/shoes/shoe/:domId",(req,res)=>{
     let id = req.params.domId;
     const shoe = findShoeById(id);
     let q = 1;
-    res.render("singleShoe.ejs", {shoe, q, fav,link});
+    let s = 1;
+    res.render("singleShoe.ejs", {shoe, q,s, fav,link});
 })
 
 
 app.post("/bag",(req,res)=>{
     const id = req.body.idOfShoe;
     const quantity = parseInt(req.body.quantity) || 1;
+    const size = req.body.size;
     const shoe = findShoeById(id);
 
     let found = false;
@@ -62,7 +64,7 @@ app.post("/bag",(req,res)=>{
         }
     }
     if (!found) {
-        bag.push({ product: shoe, quantity: quantity });
+        bag.push({ product: shoe, quantity: quantity, size: size });
     }
 
     res.redirect("/bag");
@@ -73,7 +75,7 @@ app.get("/bag", (req,res)=>{
 })
 app.delete("/bag/:id", (req,res)=>{
     let id = req.params.id;
-    bag = bag.filter((i)=> id != i.id);
+    bag = bag.filter((i)=> id !== i.id);
     res.redirect("/bag");
 })
 app.delete("/favourites/:id", (req, res)=>{

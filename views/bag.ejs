@@ -12,7 +12,7 @@
                     <div class="bag-shoe-desc">
                         <h3 id="bag-name"><%=item.product.name%></h3>
                         <p id="bag-cat"><%=item.product.category.charAt(0).toUpperCase()+item.product.category.slice(1)%>'s Shoes</p>
-                        <p>Size </p>
+                        <p>Size : <%=item.size%> </p>
                         <p>Quantity : <%=item.quantity%></p>
                         <div class="shoe-icons">
                             <form action="<%=link%>/favourites" method="post">
@@ -20,7 +20,6 @@
                                 <button style="border: none; background: none; padding: 0; cursor: pointer;">
                                     <i class="fa-regular fa-heart"></i>
                                 </button></form>
-                            </form>
                             <form action="<%=link%>/bag/<%=item.product.id%>?_method=DELETE" method="post">
                                 <button style="border: none; background: none; padding: 0; cursor: pointer;">
                                     <i class="fa-solid fa-trash"></i>

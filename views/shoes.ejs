@@ -6,7 +6,7 @@
   <div class="content">
     <% for(let category of Object.values(data.shoes)) { %>
       <% for(let product of category.products) { %>
-        <form action="<%=link%>/shoes/shoe/<%=product.id%>">
+        <form action="http://localhost:8080/shoes/shoe/<%=product.id%>">
           <button type="submit" style="background: none; border: none; padding: 0;">
         <div class="shoe-each">
           <img src="<%= product.image %>" alt="<%= product.name %>">

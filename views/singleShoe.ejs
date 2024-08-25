@@ -25,6 +25,7 @@
         <form action="<%=link%>/bag" method="post">
             <input type="hidden" name="idOfShoe" value="<%=shoe.id%>">
             <input type="hidden" id="quantInput" name="quantity" value="<%=q%>">
+            <input type="hidden" id="sizeInput" name="size" value="<%=s%>">
             <button id="bt2">Add to bag</button>
         </form>
         <% if (fav.includes(shoe)){%>
@@ -63,6 +64,17 @@
             quantityDisplay.textContent = quantity;
             quantityInput.value = quantity;
         }
+    });
+
+    const boxes = document.querySelectorAll('.box-of-size');
+
+    boxes.forEach(box => {
+        box.addEventListener('click', () => {
+            boxes.forEach(b => b.classList.remove('active'));
+            box.classList.add('active');
+            const size = box.innerText.trim(); 
+            sizeInput.value = size;
+        });
     });
 </script>
 
@@ -119,6 +131,10 @@ button{
 .box-of-size:hover{
     border: 2px solid black;
     box-shadow: 2px 2px 2px orange;
+}
+.box-of-size.active {
+    border: 3px solid gold;
+    box-shadow: 4px 4px 4px orange;
 }
 .quantity{
     margin: 2vmax 0vmax;
