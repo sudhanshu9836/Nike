@@ -1,0 +1,48 @@
+.loader {
+  width: 10px;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #000;
+}
+
+.loader::before {
+  box-shadow: -26px 0;
+  animation: l10-1 1.5s infinite linear;
+}
+
+.loader::after {
+  transform: rotate(0deg) translateX(26px);
+  animation: l10-2 1.5s infinite linear;
+}
+
+@keyframes l10-1 {
+  50% { transform: translateX(26px); }
+}
+
+@keyframes l10-2 {
+  100% { transform: rotate(-360deg) translateX(26px); }
+}
+
+/* Smooth transition for main-content-shoe */
+#main-page {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#main-page.visible {
+  visibility: visible;
+  display: block;
+  opacity: 1;
+}

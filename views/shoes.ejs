@@ -1,9 +1,12 @@
-<%- include("./boiler.ejs") %>
+<div class="loader" id="loader"></div>
+<div id="main-page">
+  <%- include("./boiler.ejs") %>
 <%- include("./header.ejs") %>
 <link rel="stylesheet" href="./files/shoes.css">
+<link rel="stylesheet" href="./files/loader.css">
 <div class="side-main">
   <%- include("./sidebar.ejs") %>
-  <div class="content">
+  <div class="content" id="shoe-content-page">
     <% for(let category of Object.values(data.shoes)) { %>
       <% for(let product of category.products) { %>
         <form action="http://localhost:8080/shoes/shoe/<%=product.id%>">
@@ -20,3 +23,9 @@
   </div>
 </div>
 <%- include("./footer.ejs") %>
+<script src="./files/loader.js"></script>
+</div>
+
+
+
+
