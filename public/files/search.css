@@ -1,0 +1,27 @@
+#search-image{
+    height: 15vmax;
+    width: 15vmax;
+}
+
+.shoe{
+    border: 2px solid lightgray;
+    width: 15vmax;
+    border-radius: 5px;
+    margin: 3vmax;
+    cursor: pointer;
+}
+
+.shoe h3{
+    text-align: center;
+}
+
+.search{
+    margin-top: 5vmax;
+}
+.search h2, .search h4{
+    margin-left: 3vmax;
+}
+
+#searched-span{
+    color: red;
+}

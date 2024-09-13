@@ -1,0 +1,25 @@
+<%- include ('./header.ejs')%>
+<div class="loader" id="loader"></div>
+
+<div id="main-page">
+    <link rel="stylesheet" href="./files/search.css">
+    <link rel="stylesheet" href="./files/loader.css">
+    <script src="./files/loader.js"></script>
+    <div class="search">
+        <h2>Search results for <span id="searched-span"><%= search %></span></h2>
+    <% if(s){ %>
+        <form action="http://localhost:8080/shoes/shoe/<%=s.id%>">
+            <button type="submit" style="background: none; border: none; padding: 0; cursor: pointer;">
+                <div class="shoe">
+                    <img src="<%= s.image %>" alt="" id="search-image">
+                    <h3><%= s.name %></h3>
+                    
+                </div>               
+            </button>
+        </form>
+        <% } else { %>
+            <h4>No items matched for your search</h3>
+        <% } %>
+    </div>
+</div>
+<%- include ('./footer.ejs')%>

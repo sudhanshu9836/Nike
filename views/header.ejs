@@ -15,8 +15,10 @@
     </div>
     <div class="right-head">
         <div class="searchbar">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="search-bar-input" placeholder="Search">
+            <form action="http://localhost:8080/search" method="post">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="search-bar-input" name="usersearch" placeholder="Search">
+            </form>
         </div>
         <form action="http://localhost:8080/favourites" method="get">
             <button type="submit" style="background: none; border: none; padding: 0; cursor: pointer;">

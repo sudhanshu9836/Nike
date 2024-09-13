@@ -48,6 +48,26 @@ app.get("/shoes/shoe/:domId",(req,res)=>{
     res.render("singleShoe.ejs", {shoe, q,s, fav,link});
 })
 
+app.post("/search", (req, res) => {
+    const search = req.body.usersearch.toLowerCase();
+    console.log(search);
+    let s = null;
+
+    for (let category in data.shoes) {
+        if (data.shoes[category].products && Array.isArray(data.shoes[category].products)) {
+            for (let shoe of data.shoes[category].products) {
+                if (search === shoe.name.toLowerCase()) {
+                    s = shoe;
+                    break;
+                }
+            }
+        }
+        if (s) break;
+    }
+
+
+    res.render("search.ejs", { search, s, link });
+});
 
 app.post("/bag",(req,res)=>{
     const id = req.body.idOfShoe;
