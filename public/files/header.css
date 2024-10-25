@@ -41,9 +41,10 @@
     justify-content: space-around;
 }
 .searchbar{
-    height: 2.5vmax;
+    height: 1.8vmax;
     width: 15vmax;
     border: 1px solid lightgray;
+    padding: 1vmax 0.5vmax 0vmax 0.5vmax;
     border-radius: 50px;
     background-color: #f5f5f5;
     display: flex;
@@ -52,10 +53,12 @@
 }
 #search-bar-input{
     width: 10vmax;
-    height: 2vmax;
+    height: 1vmax;
     border: none;
     background-color: #f5f5f5;
     font-size: 20px;
+    padding: 0.8vmax;
+    margin-top: -1vmax;
 }
 #search-bar-input:focus{
     border: none;
@@ -65,8 +68,9 @@
     margin-left: 5px ;
 }
 #heart-icon, #bag-icon, #bar-icon{
-    margin: 0px 10px;
+    margin-left: 20px;
     font-size: 1.5vmax;
+    margin-top: 15px;
 }
 #bar-icon{
     display: none;
