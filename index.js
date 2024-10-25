@@ -3,7 +3,7 @@ const methodOverride = require("method-override");
 const path = require('path');
 const data = require("./data.json")
 
-const link = "https://nike-grxy.onrender.com/";
+const link = "https://nike-grxy.onrender.com";
 
 const app = express();
 let bag = [];
